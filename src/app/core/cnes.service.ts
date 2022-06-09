@@ -5,7 +5,9 @@ import { catchError, retry } from 'rxjs/operators';
 
 import { EstabelecimentoResumo } from '../shared/estabelecimento-resumo';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class CnesService {
   configUrl = 'https://cnes.datasus.gov.br/services/estabelecimentos';
 
