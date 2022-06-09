@@ -14,12 +14,9 @@ export class HomeComponent implements OnInit {
 
   estabelecimentoResumo: EstabelecimentoResumo | undefined;
 
-  showConfig() {
+  retrieveEstabelecimentoResumo() {
     this.cnesService
       .getEstabelecimentoResumo()
-      .subscribe(
-        (data: EstabelecimentoResumo) =>
-          (this.estabelecimentoResumo = { ...data })
-      );
+      .subscribe((data: EstabelecimentoResumo) => undefined);
   }
 }
