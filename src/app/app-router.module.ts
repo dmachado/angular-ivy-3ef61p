@@ -4,7 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { DuvidasFrequentesComponent } from './pages/duvidas-frequentes/duvidas-frequentes.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'duvidas-frequentes', component: DuvidasFrequentesComponent },
 ];
 
