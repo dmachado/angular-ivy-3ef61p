@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
@@ -14,6 +15,15 @@ export class CnesService {
   constructor(private http: HttpClient) {}
 
   getEstabelecimentoResumo() {
-    return this.http.get<EstabelecimentoResumo>(this.configUrl);
+    const params = new HttpParams().set('cnpj', '43611490000337');
+    const headers = new HttpHeaders().set(
+      'Referer',
+      'https://cnes.datasus.gov.br/pages/estabelecimentos/consulta.jsp'
+    );
+
+    return this.http.get<EstabelecimentoResumo>(this.configUrl, {
+      params: params,
+      headers: headers,
+    });
   }
 }
