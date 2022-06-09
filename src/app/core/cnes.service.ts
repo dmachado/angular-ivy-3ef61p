@@ -16,10 +16,10 @@ export class CnesService {
 
   getEstabelecimentoResumo() {
     const params = new HttpParams().set('cnpj', '43611490000337');
-    const headers = new HttpHeaders().set(
-      'Referer',
-      'https://cnes.datasus.gov.br/pages/estabelecimentos/consulta.jsp'
-    );
+    // const headers = new HttpHeaders().set(
+    //   'Referer',
+    //   'https://cnes.datasus.gov.br/'
+    // );
 
     return this.http.get<EstabelecimentoResumo>(this.configUrl, {
       params: params,
