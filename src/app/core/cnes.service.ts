@@ -16,11 +16,12 @@ export class CnesService {
   constructor(private http: HttpClient) {}
 
   getEstabelecimentoResumo() {
-    const params = new HttpParams().set('cnes', '3539717');
-    //const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    const p = new HttpParams().set('cnes', '5285127');
+    //const h = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
     return this.http.get<EstabelecimentoResumo>(this.serviceURL, {
-      params: params,
+      params: p,
+      //headers: h,
     });
   }
 }
