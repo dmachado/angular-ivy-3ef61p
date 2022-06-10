@@ -18,9 +18,9 @@ export class HomeComponent implements OnInit {
     this.cnesService
       .getEstabelecimentoResumo()
       .subscribe((data: EstabelecimentoResumo) => {
-        console.log(data.dsTpUnidade);
-
         this.estabelecimentoResumo = data;
+
+        console.log(this.estabelecimentoResumo.id);
       });
   }
 }
