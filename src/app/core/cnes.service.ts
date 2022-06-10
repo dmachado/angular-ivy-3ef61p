@@ -16,7 +16,7 @@ export class CnesService {
   constructor(private http: HttpClient) {}
 
   getEstabelecimentoResumo() {
-    const p = new HttpParams().set('cnes', '5285127');
+    const p = new HttpParams().set('cnes', '5360056');
     //const h = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
     return this.http.get<EstabelecimentoResumo>(this.serviceURL, {
