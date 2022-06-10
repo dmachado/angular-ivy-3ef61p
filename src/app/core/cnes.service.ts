@@ -11,7 +11,7 @@ import { EstabelecimentoResumo } from '../shared/estabelecimento-resumo';
 })
 export class CnesService {
   configUrl =
-    'https://q7pus3has5.execute-api.sa-east-1.amazonaws.com/default/fetchEstabelecimentoResumo';
+    'https://gt8gxlw4q2.execute-api.sa-east-1.amazonaws.com/default/ObterEstabelecimento';
 
   constructor(private http: HttpClient) {}
 
@@ -26,7 +26,7 @@ export class CnesService {
   }
 }
 
-// lambda AWS
+//lambda AWS
 
 // import json
 // from botocore.vendored import requests
@@ -55,4 +55,33 @@ export class CnesService {
 //             'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
 //         },
 //         'body': json.dumps(estabelecimento_detalhe)
+//     }
+
+// import urllib3
+// import json
+
+// def lambda_handler(event, context):
+
+//     http = urllib3.PoolManager()
+
+//     headers = {'Referer': 'https://cnes.datasus.gov.br'}
+
+//     cnes = 3539717
+
+//     r_estabelecimento = http.request('GET', 'https://cnes.datasus.gov.br/services/estabelecimentos?cnes=' + str(cnes), headers=headers)
+//     # estabelecimento = json.loads(r_estabelecimento.data.decode('utf-8'))
+
+//     # estabelecimento_id = estabelecimento[0]['id']
+
+//     # r_estabelecimento_detalhes = http.request('GET', 'https://cnes.datasus.gov.br/services/estabelecimentos/'+ estabelecimento_id, headers=headers)
+//     # estabelecimento_detalhe = json.loads(r_estabelecimento_detalhes.data.decode('utf-8'))
+
+//     return {
+//         'statusCode': 200,
+//         'headers': {
+//              'Access-Control-Allow-Headers': 'Content-Type',
+//              'Access-Control-Allow-Origin': '*',
+//              'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+//          },
+//         'body': json.dumps('Hello from Lambda!')
 //     }
