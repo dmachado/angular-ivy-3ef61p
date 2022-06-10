@@ -11,7 +11,7 @@ import { EstabelecimentoResumo } from '../shared/estabelecimento-resumo';
 })
 export class CnesService {
   serviceURL =
-    'https://gt8gxlw4q2.execute-api.sa-east-1.amazonaws.com/default/ObterEstabelecimento';
+    'https://vl8y5j6hwl.execute-api.sa-east-1.amazonaws.com/default/ObterEstabelecimento';
 
   constructor(private http: HttpClient) {}
 
