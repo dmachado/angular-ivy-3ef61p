@@ -10,20 +10,18 @@ import { EstabelecimentoResumo } from '../shared/estabelecimento-resumo';
   providedIn: 'root',
 })
 export class CnesService {
-  configUrl = 'https://cnes.datasus.gov.br/services/estabelecimentos';
+  configUrl =
+    'https://q7pus3has5.execute-api.sa-east-1.amazonaws.com/default/fetchEstabelecimentoResumo';
 
   constructor(private http: HttpClient) {}
 
   getEstabelecimentoResumo() {
     const params = new HttpParams().set('cnpj', '43611490000337');
-    // const headers = new HttpHeaders().set(
-    //   'Referer',
-    //   'https://cnes.datasus.gov.br/'
-    // );
 
-    return this.http.get<EstabelecimentoResumo>(this.configUrl, {
-      params: params,
-      headers: headers,
-    });
+    const headers = new HttpHeaders()
+      //.set('Referer', 'https://cnes.datasus.gov.br/')
+      .set('Access-Control-Allow-Origin', '*');
+
+    return this.http.get<EstabelecimentoResumo>(this.configUrl);
   }
 }
