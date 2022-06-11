@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CnesService } from '../../core/cnes.service';
-import { EstabelecimentoResumo } from '../../shared/estabelecimento-resumo';
+import { Estabelecimento } from '../../shared/estabelecimento';
 
 @Component({
   selector: 'app-home',
@@ -12,15 +12,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {}
 
-  estabelecimentoResumo: EstabelecimentoResumo | undefined;
+  estabelecimento: Estabelecimento | undefined;
 
-  retrieveEstabelecimentoResumo() {
-    this.cnesService
-      .getEstabelecimentoResumo()
-      .subscribe((data: EstabelecimentoResumo) => {
-        this.estabelecimentoResumo = data;
+  retrieveEstabelecimento() {
+    this.cnesService.getEstabelecimento().subscribe((data: Estabelecimento) => {
+      this.estabelecimento = data;
 
-        console.log(this.estabelecimentoResumo.id);
-      });
+      console.log(this.estabelecimento.id);
+    });
   }
 }

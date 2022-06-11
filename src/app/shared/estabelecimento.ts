@@ -1,4 +1,4 @@
-export interface EstabelecimentoResumo {
+export interface Estabelecimento {
   id: number;
   cnes: number;
   noFantasia: string;

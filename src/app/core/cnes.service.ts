@@ -4,7 +4,7 @@ import {} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
-import { EstabelecimentoResumo } from '../shared/estabelecimento-resumo';
+import { Estabelecimento } from '../shared/estabelecimento';
 
 @Injectable({
   providedIn: 'root',
@@ -15,11 +15,11 @@ export class CnesService {
 
   constructor(private http: HttpClient) {}
 
-  getEstabelecimentoResumo() {
+  getEstabelecimento() {
     const p = new HttpParams().set('cnes', '5360056');
     //const h = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
-    return this.http.get<EstabelecimentoResumo>(this.serviceURL, {
+    return this.http.get<Estabelecimento>(this.serviceURL, {
       params: p,
       //headers: h,
     });
