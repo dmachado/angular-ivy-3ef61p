@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
 
   estabelecimento: Estabelecimento | undefined;
 
-  @Input() input: 'CNES | CNPJ | CPF' | string;
-  @Output() inputChange = new EventEmitter<string>();
+  @Input() inputPesquisa: 'CNES | CNPJ | CPF' | string;
+  @Output() inputPesquisaChange = new EventEmitter<string>();
 
   retrieveEstabelecimento() {
     this.cnesService.getEstabelecimento().subscribe((data: Estabelecimento) => {
