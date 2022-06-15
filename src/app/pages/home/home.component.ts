@@ -18,10 +18,12 @@ export class HomeComponent implements OnInit {
   value = 'www';
 
   retrieveEstabelecimento() {
-    this.cnesService.getEstabelecimento().subscribe((data: Estabelecimento) => {
-      this.estabelecimento = data;
-      console.log(value);
-      console.log(this.estabelecimento);
-    });
+    this.cnesService
+      .getEstabelecimento({ cnes: this.value })
+      .subscribe((data: Estabelecimento) => {
+        this.estabelecimento = data;
+        console.log(this.value);
+        console.log(this.estabelecimento);
+      });
   }
 }

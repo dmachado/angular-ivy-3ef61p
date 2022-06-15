@@ -15,12 +15,13 @@ export class CnesService {
 
   constructor(private http: HttpClient) {}
 
-  getEstabelecimento() {
-    const p = new HttpParams().set('cnes', '5360056');
+  getEstabelecimento(params) {
+    //const p = new HttpParams().set('cnes', '5360056');
+
     //const h = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
     return this.http.get<Estabelecimento>(this.serviceURL, {
-      params: p,
+      params: params,
       //headers: h,
     });
   }
