@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { CnesService } from '../../core/cnes.service';
 import { Estabelecimento } from '../../shared/estabelecimento';
 
@@ -14,15 +15,12 @@ export class HomeComponent implements OnInit {
 
   estabelecimento: Estabelecimento | undefined;
 
-  teste1 = 'www';
-
-  @Input() inputPesquisa: 'CNES | CNPJ | CPF' | string;
-  @Output() inputPesquisaChange = new EventEmitter<string>();
+  value = 'www';
 
   retrieveEstabelecimento() {
     this.cnesService.getEstabelecimento().subscribe((data: Estabelecimento) => {
       this.estabelecimento = data;
-
+      console.log(value);
       console.log(this.estabelecimento);
     });
   }
