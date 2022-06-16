@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   estabelecimento: Estabelecimento | undefined;
 
-  value = 'www';
+  value = '3348938';
 
   retrieveEstabelecimento() {
     this.cnesService

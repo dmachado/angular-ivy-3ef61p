@@ -1,15 +1,18 @@
 <div class="container d-flex flex-column">
-  <div class="d-flex mt-5 flex-fill">
+  <div class="d-flex mt-4 flex-fill">
     <form class="d-flex flex-fill">
-      <input
-        id="input-pesquisar"
-        class="form-control me-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-        name="value"
-        [(ngModel)]="value"
-      />
+      <div class="form-floating flex-fill">
+        <input
+          id="input-pesquisar"
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          name="value"
+          [(ngModel)]="value"
+        />
+        <label for="floatingInput">Pesquise por CNES, CNPJ ou CPF</label>
+      </div>
       <button
         class="btn btn-outline-success"
         type="button"
@@ -19,20 +22,196 @@
       </button>
     </form>
   </div>
-  <div *ngIf="estabelecimento" class="card mt-5">
-    <h5 class="card-header">{{ estabelecimento.noFantasia }}</h5>
-    <div class="card-body">
-      <h5 class="card-title">{{ estabelecimento.noEmpresarial }}</h5>
-      <p class="card-text">
-        {{ estabelecimento.cnpj }}
-      </p>
-      <p class="card-text">
-        {{ estabelecimento.cnes }}
-      </p>
-      <p class="card-text">
-        {{ estabelecimento.id }}
-      </p>
-      <a href="#" class="btn btn-primary">Renovar</a>
+  <div *ngIf="estabelecimento" class="mt-4 col-lg-12 col-xs-12 clearfix">
+    <div class="row g-3">
+      <div class="col-md-7">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="nome"
+            type="text"
+            name="estabelecimento.noFantasia"
+            [(ngModel)]="estabelecimento.noFantasia"
+          />
+          <label for="floatingInput">Nome</label>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="cnes"
+            type="text"
+            name="estabelecimento.cnes"
+            [(ngModel)]="estabelecimento.cnes"
+          />
+          <label>CNES</label>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="cnpj"
+            type="text"
+            name="estabelecimento.cnpj"
+            [(ngModel)]="estabelecimento.cnpj"
+          />
+          <label>CNPJ</label>
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="noEmpresarial"
+            type="text"
+            name="estabelecimento.noEmpresarial"
+            [(ngModel)]="estabelecimento.noEmpresarial"
+          />
+          <label>Nome Empresarial</label>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="natJuridica"
+            type="text"
+            name="estabelecimento.natJuridica"
+            [(ngModel)]="estabelecimento.natJuridica"
+          />
+          <label>Natureza Jurídica</label>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="dsTpUnidade"
+            type="text"
+            name="estabelecimento.dsTpUnidade"
+            [(ngModel)]="estabelecimento.dsTpUnidade"
+          />
+          <label>Tipo Estabelecimento</label>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="nome"
+            type="text"
+            ng-value="estabelecimento.noFantasia"
+            value=""
+            placeholder="name@example.com"
+          />
+          <label>Sub Tipo Estabelecimento</label>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="nome"
+            type="text"
+            ng-value="estabelecimento.noFantasia"
+            value=""
+            placeholder="name@example.com"
+          />
+          <label>Gestão</label>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="nome"
+            type="text"
+            ng-value="estabelecimento.noFantasia"
+            value=""
+            placeholder="name@example.com"
+          />
+          <label>Diretor Clínico/Gerente/Administrador</label>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="dtAtualizacaoOrigem"
+            type="text"
+            name="estabelecimento.dtAtualizacaoOrigem"
+            [(ngModel)]="estabelecimento.dtAtualizacaoOrigem"
+          />
+          <label>Cadastrado em</label>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="dtAtualizacao"
+            type="text"
+            name="estabelecimento.dtAtualizacao"
+            [(ngModel)]="estabelecimento.dtAtualizacao"
+          />
+          <label>Atualização na Base Local</label>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="dtCarga"
+            type="text"
+            name="estabelecimento.dtCarga"
+            [(ngModel)]="estabelecimento.dtCarga"
+          />
+          <label>Última atualização Nacional</label>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="nuCompDesab"
+            type="text"
+            name="estabelecimento.nuCompDesab"
+            [(ngModel)]="estabelecimento.nuCompDesab"
+          />
+          <label>Data da Desativação</label>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="form-floating">
+          <input
+            class="form-control"
+            id="dsMotivoDesab"
+            type="text"
+            name="estabelecimento.dsMotivoDesab"
+            [(ngModel)]="estabelecimento.dsMotivoDesab"
+          />
+          <label>Motivo da Desativação</label>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
     </div>
   </div>
 </div>
