@@ -1,25 +1,31 @@
 <div class="container d-flex flex-column">
   <div class="d-flex mt-4 flex-fill">
     <form class="d-flex flex-fill">
-      <div class="form-floating flex-fill">
-        <input
-          id="input-pesquisar"
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          name="value"
-          [(ngModel)]="value"
-        />
-        <label for="floatingInput">Pesquise por CNES, CNPJ ou CPF</label>
+      <div class="row">
+        <div class="col-md-10">
+          <div class="form-floating flex-fill">
+            <input
+              id="input-pesquisar"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              name="value"
+              [(ngModel)]="value"
+            />
+            <label for="floatingInput">Pesquise por CNES, CNPJ ou CPF</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button
+            class="btn btn-outline-success"
+            type="button"
+            (click)="retrieveEstabelecimento()"
+          >
+            Pesquisar
+          </button>
+        </div>
       </div>
-      <button
-        class="btn btn-outline-success"
-        type="button"
-        (click)="retrieveEstabelecimento()"
-      >
-        Pesquisar
-      </button>
     </form>
   </div>
   <div *ngIf="estabelecimento" class="mt-4 col-lg-12 col-xs-12 clearfix">
@@ -80,7 +86,7 @@
         </div>
       </div>
 
-      <div class="col-md-5">
+      <!-- <div class="col-md-5">
         <div class="form-floating">
           <input
             class="form-control"
@@ -92,9 +98,9 @@
           />
           <label>Natureza Jurídica</label>
         </div>
-      </div>
+      </div> -->
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <div class="form-floating">
           <input
             class="form-control"
@@ -108,13 +114,13 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <!-- <div class="col-md-3">
         <div class="form-floating">
           <input
             class="form-control"
             id="nome"
             type="text"
-            ng-value="estabelecimento.noFantasia"
+            ng-value="estabelecimento.subtipoEstabelecimento"
             value=""
             disabled
           />
@@ -128,7 +134,7 @@
             class="form-control"
             id="nome"
             type="text"
-            ng-value="estabelecimento.noFantasia"
+            ng-value="estabelecimento.gestao"
             value=""
             disabled
           />
@@ -142,13 +148,13 @@
             class="form-control"
             id="nome"
             type="text"
-            ng-value="estabelecimento.noFantasia"
+            ng-value="estabelecimento.diretorioClinicoGerenteAdministrador"
             value=""
             disabled
           />
           <label>Diretor Clínico/Gerente/Administrador</label>
         </div>
-      </div>
+      </div> -->
 
       <div class="col-md-4">
         <div class="form-floating">
