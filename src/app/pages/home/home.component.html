@@ -1,31 +1,33 @@
 <div class="container d-flex flex-column">
   <div class="d-flex mt-4 flex-fill">
     <form class="d-flex flex-fill">
-      <div class="row">
-        <div class="col-md-10">
-          <div class="form-floating flex-fill">
-            <input
-              id="input-pesquisar"
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              name="value"
-              [(ngModel)]="value"
-            />
-            <label for="floatingInput">Pesquise por CNES, CNPJ ou CPF</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <button
-            class="btn btn-outline-success"
-            type="button"
-            (click)="retrieveEstabelecimento()"
+      <!--
+
+
+
+-->
+
+      <div class="input-group mb-3">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingInputGroup" />
+          <label for="floatingInputGroup"
+            >Procure por CNES ou CNPJ ou CPF</label
           >
-            Pesquisar
-          </button>
         </div>
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon"
+        >
+          Pesquisar
+        </button>
       </div>
+
+      <!--
+
+
+  
+-->
     </form>
   </div>
   <div *ngIf="estabelecimento" class="mt-4 col-lg-12 col-xs-12 clearfix">
