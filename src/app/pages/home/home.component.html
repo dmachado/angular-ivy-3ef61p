@@ -18,6 +18,7 @@
           class="btn btn-outline-secondary"
           type="button"
           id="button-addon"
+          (click)="retrieveEstabelecimento()"
         >
           Pesquisar
         </button>
@@ -30,7 +31,7 @@
 -->
     </form>
   </div>
-  <div *ngIf="estabelecimento" class="mt-4 col-lg-12 col-xs-12 clearfix">
+  <div *ngIf="estabelecimento" class="col-lg-12 col-xs-12 clearfix">
     <div class="row g-3">
       <div class="col-md-7">
         <div class="form-floating">
@@ -88,20 +89,6 @@
         </div>
       </div>
 
-      <!-- <div class="col-md-5">
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="natJuridica"
-            type="text"
-            name="estabelecimento.natJuridica"
-            [(ngModel)]="estabelecimento.natJuridica"
-            disabled
-          />
-          <label>Natureza Jurídica</label>
-        </div>
-      </div> -->
-
       <div class="col-md-5">
         <div class="form-floating">
           <input
@@ -115,48 +102,6 @@
           <label>Tipo Estabelecimento</label>
         </div>
       </div>
-
-      <!-- <div class="col-md-3">
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="nome"
-            type="text"
-            ng-value="estabelecimento.subtipoEstabelecimento"
-            value=""
-            disabled
-          />
-          <label>Sub Tipo Estabelecimento</label>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="nome"
-            type="text"
-            ng-value="estabelecimento.gestao"
-            value=""
-            disabled
-          />
-          <label>Gestão</label>
-        </div>
-      </div>
-
-      <div class="col-md-12">
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="nome"
-            type="text"
-            ng-value="estabelecimento.diretorioClinicoGerenteAdministrador"
-            value=""
-            disabled
-          />
-          <label>Diretor Clínico/Gerente/Administrador</label>
-        </div>
-      </div> -->
 
       <div class="col-md-4">
         <div class="form-floating">
@@ -226,10 +171,6 @@
           />
           <label>Motivo da Desativação</label>
         </div>
-      </div>
-
-      <div class="btn-group">
-        <button type="submit" class="btn btn-success">Atualizar</button>
       </div>
     </div>
   </div>
