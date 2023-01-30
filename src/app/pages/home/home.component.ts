@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CnesService } from '../../core/cnes.service';
-import { Estabelecimento } from '../../shared/estabelecimento';
+import { Estabelecimento } from '../../estabelecimento/estabelecimento';
 
 @Component({
   selector: 'app-home',
