@@ -12,5 +12,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {}
 
-  apresentaEstabelecimento(estabelecimento: Estabelecimento) {}
+  estabelecimento: Estabelecimento | undefined;
+
+  apresentaEstabelecimento(estabelecimentoTeste: Estabelecimento) {
+    this.estabelecimento = estabelecimentoTeste;
+  }
 }
