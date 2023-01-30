@@ -4,12 +4,12 @@ import {} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
-import { Estabelecimento } from '../shared/estabelecimento';
+import { Estabelecimento } from './estabelecimento';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CnesService {
+export class EstabelecimentoService {
   serviceURL =
     'https://vl8y5j6hwl.execute-api.sa-east-1.amazonaws.com/default/ObterEstabelecimento';
 

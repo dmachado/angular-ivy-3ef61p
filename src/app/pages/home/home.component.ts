@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { CnesService } from '../../core/cnes.service';
+import { EstabelecimentoService } from '../../estabelecimento/estabelecimento.service';
 import { Estabelecimento } from '../../estabelecimento/estabelecimento';
 
 @Component({
@@ -9,7 +9,7 @@ import { Estabelecimento } from '../../estabelecimento/estabelecimento';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private cnesService: CnesService) {}
+  constructor(private cnesService: EstabelecimentoService) {}
 
   ngOnInit() {}
 
