@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Estabelecimento } from 'src/app/estabelecimento/estabelecimento';
 
 @Component({
   selector: 'app-home',
@@ -10,4 +11,6 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  apresentaEstabelecimento(estabelecimento: Estabelecimento) {}
 }
