@@ -1,37 +1,9 @@
 <app-busca-estabelecimento></app-busca-estabelecimento>
 <div class="container d-flex flex-column">
   <div class="d-flex mt-4 flex-fill">
-    <form class="d-flex flex-fill">
-      <!--
-
-
-
--->
-
-      <div class="input-group mb-3">
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputGroup" />
-          <label for="floatingInputGroup"
-            >Procure por CNES ou CNPJ ou CPF</label
-          >
-        </div>
-        <button
-          class="btn btn-outline-secondary"
-          type="button"
-          id="button-addon"
-          (click)="retrieveEstabelecimento()"
-        >
-          Pesquisar
-        </button>
-      </div>
-
-      <!--
-
-
-  
--->
-    </form>
+    <app-busca-estabelecimento></app-busca-estabelecimento>
   </div>
+  <!--
   <div *ngIf="estabelecimento" class="col-lg-12 col-xs-12 clearfix">
     <div class="row g-3">
       <div class="col-md-7">
@@ -104,50 +76,6 @@
         </div>
       </div>
 
-      <!--
-      <div class="col-md-4">
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="dtAtualizacaoOrigem"
-            type="text"
-            name="estabelecimento.dtAtualizacaoOrigem"
-            [(ngModel)]="estabelecimento.dtAtualizacaoOrigem"
-            disabled
-          />
-          <label>Cadastrado em</label>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="dtAtualizacao"
-            type="text"
-            name="estabelecimento.dtAtualizacao"
-            [(ngModel)]="estabelecimento.dtAtualizacao"
-            disabled
-          />
-          <label>Atualização na Base Local</label>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-floating">
-          <input
-            class="form-control"
-            id="dtCarga"
-            type="text"
-            name="estabelecimento.dtCarga"
-            [(ngModel)]="estabelecimento.dtCarga"
-            disabled
-          />
-          <label>Última atualização Nacional</label>
-        </div>
-      </div>
-    -->
-
       <div class="col-md-3">
         <div class="form-floating">
           <input
@@ -182,4 +110,5 @@
       </div>
     </div>
   </div>
+  -->
 </div>
