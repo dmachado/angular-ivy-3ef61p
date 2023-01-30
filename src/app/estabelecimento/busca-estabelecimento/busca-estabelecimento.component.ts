@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 import { EstabelecimentoService } from '../estabelecimento.service';
 import { Estabelecimento } from '../estabelecimento';
@@ -10,6 +11,8 @@ import { Estabelecimento } from '../estabelecimento';
 })
 export class BuscaEstabelecimentoComponent implements OnInit {
   constructor(private estabelecimentoService: EstabelecimentoService) {}
+
+  @Output() estabelecimentoRequisitado = new EventEmitter<Estabelecimento>();
 
   ngOnInit() {}
 
@@ -24,6 +27,8 @@ export class BuscaEstabelecimentoComponent implements OnInit {
         this.estabelecimento = data;
         console.log(this.value);
         console.log(this.estabelecimento);
+
+        this.estabelecimentoRequisitado.emit(this.estabelecimento);
       });
   }
 }
