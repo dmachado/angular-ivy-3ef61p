@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Estabelecimento } from 'src/app/estabelecimento/estabelecimento';
+import { Estabelecimento } from '../../estabelecimento/estabelecimento';
 
 @Component({
   selector: 'app-home',
