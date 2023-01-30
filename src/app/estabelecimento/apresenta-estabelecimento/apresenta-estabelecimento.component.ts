@@ -11,5 +11,5 @@ export class ApresentaEstabelecimentoComponent implements OnInit {
 
   ngOnInit() {}
 
-  @Input() estabelecimento: Estabelecimento | undefined;
+  @Input() estab: Estabelecimento;
 }
