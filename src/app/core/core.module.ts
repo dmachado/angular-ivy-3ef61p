@@ -11,6 +11,4 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [NavigationComponent, FooterComponent],
   exports: [NavigationComponent, FooterComponent],
 })
-export class CoreModule {
-  NavigationComponent;
-}
+export class CoreModule {}
