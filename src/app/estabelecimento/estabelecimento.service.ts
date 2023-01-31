@@ -22,6 +22,10 @@ export class EstabelecimentoService {
     this.estabelecimento$ = this.estabelecimentoSubject.asObservable();
   }
 
+  public get estabelecimento() {
+    return this._estabelecimento;
+  }
+
   getEstabelecimento(params) {
     //const p = new HttpParams().set('cnes', '5360056');
 

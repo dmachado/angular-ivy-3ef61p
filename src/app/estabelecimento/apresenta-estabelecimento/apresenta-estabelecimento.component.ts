@@ -11,10 +11,10 @@ export class ApresentaEstabelecimentoComponent implements OnInit {
   estabelecimento: Estabelecimento;
 
   constructor(private estabelecimentoService: EstabelecimentoService) {
-    console.log('construtor');
+    this.estabelecimento = estabelecimentoService.estabelecimento;
+
     estabelecimentoService.estabelecimento$.subscribe(
       (estabelecimento: Estabelecimento) => {
-        console.log('atualizacao');
         this.estabelecimento = estabelecimento;
       }
     );

@@ -2,5 +2,7 @@
   <div class="d-flex mt-4 flex-fill">
     <app-busca-estabelecimento></app-busca-estabelecimento>
   </div>
-  <app-apresenta-estabelecimento></app-apresenta-estabelecimento>
+  <app-apresenta-estabelecimento
+    *ngIf="estabelecimento"
+  ></app-apresenta-estabelecimento>
 </div>
