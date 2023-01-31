@@ -27,14 +27,16 @@ export class EstabelecimentoService {
 
     //const h = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
-    return this.http
-      .get<Estabelecimento>(this.serviceURL, {
-        params: params,
-        //headers: h,
-      })
-      .subscribe((data: Estabelecimento) => {
-        this._estabelecimento = data;
-        this.estabelecimentoSubject.next(data);
-      });
+    const result = this.http.get<Estabelecimento>(this.serviceURL, {
+      params: params,
+      //headers: h,
+    });
+
+    result.subscribe((data: Estabelecimento) => {
+      this._estabelecimento = data;
+      this.estabelecimentoSubject.next(data);
+    });
+
+    return result;
   }
 }
