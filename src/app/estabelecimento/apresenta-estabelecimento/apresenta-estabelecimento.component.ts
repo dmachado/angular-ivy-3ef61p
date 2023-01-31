@@ -11,6 +11,4 @@ export class ApresentaEstabelecimentoComponent implements OnInit {
   constructor(private estabelecimentoService: EstabelecimentoService) {}
 
   ngOnInit() {}
-
-  @Input() estabelecimento: Estabelecimento;
 }
