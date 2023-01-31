@@ -18,6 +18,7 @@ export class EstabelecimentoService {
   private _estabelecimento: Estabelecimento;
 
   constructor(private http: HttpClient) {
+    this._estabelecimento = {} as Estabelecimento;
     this.estabelecimentoSubject = new Subject<Estabelecimento>();
     this.estabelecimento$ = this.estabelecimentoSubject.asObservable();
   }
