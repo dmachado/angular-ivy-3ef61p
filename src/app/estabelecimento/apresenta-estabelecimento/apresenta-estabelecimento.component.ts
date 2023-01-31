@@ -8,7 +8,14 @@ import { EstabelecimentoService } from '../estabelecimento.service';
   styleUrls: ['./apresenta-estabelecimento.component.css'],
 })
 export class ApresentaEstabelecimentoComponent implements OnInit {
-  constructor(private estabelecimentoService: EstabelecimentoService) {}
+  estabelecimento: Estabelecimento;
+
+  constructor(private estabelecimentoService: EstabelecimentoService) {
+    estabelecimentoService.estabelecimento$.subscribe(
+      (estabelecimento: Estabelecimento) =>
+        (this.estabelecimento = estabelecimento)
+    );
+  }
 
   ngOnInit() {}
 }
