@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { EstabelecimentoService } from 'src/app/estabelecimento/estabelecimento.service';
+import { EstabelecimentoService } from '../../estabelecimento/estabelecimento.service';
 import { Estabelecimento } from '../../estabelecimento/estabelecimento';
 
 @Component({

@@ -11,12 +11,7 @@ import { EstabelecimentoService } from './estabelecimento.service';
   declarations: [
     BuscaEstabelecimentoComponent,
     ApresentaEstabelecimentoComponent,
-    EstabelecimentoService,
   ],
-  exports: [
-    BuscaEstabelecimentoComponent,
-    ApresentaEstabelecimentoComponent,
-    EstabelecimentoService,
-  ],
+  exports: [BuscaEstabelecimentoComponent, ApresentaEstabelecimentoComponent],
 })
 export class EstabelecimentoModule {}
