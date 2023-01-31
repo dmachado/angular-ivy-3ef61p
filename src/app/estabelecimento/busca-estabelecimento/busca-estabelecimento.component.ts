@@ -12,23 +12,13 @@ import { Estabelecimento } from '../estabelecimento';
 export class BuscaEstabelecimentoComponent implements OnInit {
   constructor(private estabelecimentoService: EstabelecimentoService) {}
 
-  @Output() estabelecimentoRequisitado = new EventEmitter<Estabelecimento>();
-
   ngOnInit() {}
-
-  estabelecimento: Estabelecimento | undefined;
 
   value = '3348938';
 
   retrieveEstabelecimento() {
     this.estabelecimentoService
       .getEstabelecimento({ cnes: this.value })
-      .subscribe((data: Estabelecimento) => {
-        this.estabelecimento = data;
-        console.log(this.value);
-        console.log(this.estabelecimento);
-
-        this.estabelecimentoRequisitado.emit(this.estabelecimento);
-      });
+      .subscribe((data: Estabelecimento) => {});
   }
 }
