@@ -14,7 +14,12 @@ export class BuscaEstabelecimentoComponent implements OnInit {
 
   ngOnInit() {}
 
-  //value = '3348938';
+  /*
+  CNES = 3984397
+  CPF = 00485138816
+  NOME = ANDRE LYRIO NETO
+  CNPJ = 43611490000337
+  */
 
   retrieveEstabelecimento(value) {
     this.estabelecimentoService
