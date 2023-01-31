@@ -1,14 +1,14 @@
 <form class="d-flex flex-fill">
   <div class="input-group mb-3">
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInputGroup" />
+      <input #busca type="text" class="form-control" id="floatingInputGroup" />
       <label for="floatingInputGroup">Procure por CNES ou CNPJ ou CPF</label>
     </div>
     <button
       class="btn btn-outline-secondary"
       type="button"
       id="button-addon"
-      (click)="retrieveEstabelecimento()"
+      (click)="retrieveEstabelecimento(busca.value)"
     >
       Pesquisar
     </button>

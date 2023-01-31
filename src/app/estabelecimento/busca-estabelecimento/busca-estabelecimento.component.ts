@@ -14,11 +14,11 @@ export class BuscaEstabelecimentoComponent implements OnInit {
 
   ngOnInit() {}
 
-  value = '3348938';
+  //value = '3348938';
 
-  retrieveEstabelecimento() {
+  retrieveEstabelecimento(value) {
     this.estabelecimentoService
-      .getEstabelecimento({ cnes: this.value })
+      .getEstabelecimento({ cnes: value })
       .subscribe((data: Estabelecimento) => {});
   }
 }
