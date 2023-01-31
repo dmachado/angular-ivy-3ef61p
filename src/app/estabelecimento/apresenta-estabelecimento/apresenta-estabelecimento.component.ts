@@ -11,9 +11,12 @@ export class ApresentaEstabelecimentoComponent implements OnInit {
   estabelecimento: Estabelecimento;
 
   constructor(private estabelecimentoService: EstabelecimentoService) {
+    console.log('construtor');
     estabelecimentoService.estabelecimento$.subscribe(
-      (estabelecimento: Estabelecimento) =>
-        (this.estabelecimento = estabelecimento)
+      (estabelecimento: Estabelecimento) => {
+        console.log('atualizacao');
+        this.estabelecimento = estabelecimento;
+      }
     );
   }
 
