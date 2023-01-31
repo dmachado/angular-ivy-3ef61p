@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { EstabelecimentoService } from 'src/app/estabelecimento/estabelecimento.service';
 import { Estabelecimento } from '../../estabelecimento/estabelecimento';
 
 @Component({
@@ -8,9 +9,14 @@ import { Estabelecimento } from '../../estabelecimento/estabelecimento';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  estabelecimento: Estabelecimento;
+
+  constructor(private estabelecimentoService: EstabelecimentoService) {
+    estabelecimentoService.estabelecimento$.subscribe(
+      (estabelecimento: Estabelecimento) =>
+        (this.estabelecimento = estabelecimento)
+    );
+  }
 
   ngOnInit() {}
-
-  estabelecimento: Estabelecimento | undefined;
 }
